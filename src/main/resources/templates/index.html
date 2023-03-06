@@ -7,12 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 <body>
@@ -22,11 +16,8 @@
             <div class="col-md-5">
                 <div class="social-login text-center">
                     <div sec:authorize="isAnonymous()">
-                        <a th:href="@{/oauth2/authorization/google}" class="google btn btn-block">Sign in with
-                            Google</a>
-                        <a th:href="@{/oauth2/authorization/naver}" class="naver btn btn-block">Sign in with Naver</a>
-                        <a th:href="@{/oauth2/authorization/keycloak}" class="keycloak btn btn-block">Sign in with
-                            Keycloak</a>
+                        <a th:href="@{/oauth2/authorization/google}" class="google btn btn-block">Sign in with Google</a>
+                        <a th:href="@{/oauth2/authorization/keycloak}" class="keycloak btn btn-block">Sign in with Keycloak</a>
                     </div>
                     <div sec:authorize="isAuthenticated()">
                         <div>
@@ -43,5 +34,4 @@
     </div>
 </div>
 </body>
-<script src="js/bootstrap.bundle.js"></script>
 </html>
